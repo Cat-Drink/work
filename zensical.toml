@@ -12,8 +12,8 @@
 [project]
 # ===== 基本信息 [Info] =====
 site_name = "CatDrink's Blog"           # 网站名称
-site_url = "http://localhost:8000"  # 网站URL（请修改为你的域名）
-# site_url = "https://cat-drink.github.io/work/"  # 网站URL（请修改为你的域名）
+# site_url = "http://localhost:8000"  # 网站URL（请修改为你的域名）
+site_url = "https://cat-drink.github.io/work/"  # 网站URL（请修改为你的域名）
 site_description = "一个使用 Zensical 构建的博客站站"  # 网站描述
 site_author = "CatDrink"                           # 网站作者
 copyright = "Copyright &copy; 2026～2027 CatDrink"      # 左下角的版权声明
