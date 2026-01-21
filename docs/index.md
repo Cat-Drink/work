@@ -54,7 +54,7 @@ hide:
 
 <!-- 移动端显示的标语 -->
 <div class="mobile-motto">
-  <h1>人生如逆旅</h1>
+  <h1>人生如逆旅，我亦是行人</h1>
 </div>
 
 <style>
@@ -798,9 +798,9 @@ hr {
 
 <div class="grid cards" markdown>
 
-<!-- -   :material-gamepad-variant-outline:{ .lg .middle } __好用/好玩__
-
-    --- -->
+-   :material-gamepad-variant-outline:{ .lg .middle } __好用/好玩__
+    [一些不错的github项目](blog/一些不错的github项目.md)
+    ---
 
 
 -   :material-account-box-outline:{ .lg .middle } __关于__
