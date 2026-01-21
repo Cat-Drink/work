@@ -801,7 +801,7 @@ hr {
 -   :material-gamepad-variant-outline:{ .lg .middle } __好用/好玩__
     
     ---
-    [一些不错的github项目](blog/一些不错的github项目.md)
+    [一些不错的github项目](relax/yxiebcdegithubxm.md)
 
 -   :material-account-box-outline:{ .lg .middle } __关于__
 
