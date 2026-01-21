@@ -12,17 +12,18 @@
 [project]
 # ===== 基本信息 [Info] =====
 site_name = "CatDrink's Blog"           # 网站名称
-site_url = "http://localhost:8000"  # 网站URL（请修改为你的域名）
-site_description = "一个使用 Zensical 构建的文档网站"  # 网站描述
+# site_url = "http://localhost:8000"  # 网站URL（请修改为你的域名）
+site_url = "https://cat-drink.github.io/work/"  # 网站URL（请修改为你的域名）
+site_description = "一个使用 Zensical 构建的博客站站"  # 网站描述
 site_author = "CatDrink"                           # 网站作者
-copyright = "Copyright &copy; 2025～2026 CatDrink"      # 左下角的版权声明
+copyright = "Copyright &copy; 2026～2027 CatDrink"      # 左下角的版权声明
 docs_dir = "docs"                                # 文档目录
 site_dir = "site"                                # 生成的网站目录
 use_directory_urls = true                        # 使用目录形式的URL
 
 # ===== 仓库配置 =====
-repo_url = ""  # 右上角点击跳转的链接
-repo_name = ""                            # 右上角的名字
+repo_url = "https://github.com/Cat-Drink/work"  # 右上角点击跳转的链接
+repo_name = "work"                            # 右上角的名字
 edit_uri = "edit/main/docs"                              # 编辑按钮跳转的链接
 
 # ===== 额外的 JavaScript 文件 =====
@@ -145,7 +146,7 @@ deprecated = "已弃用"
 # 显示在页脚的社交媒体图标
 [[project.extra.social]]
 icon = "fontawesome/brands/github"
-link = ""
+link = "https://github.com/Cat-Drink"
 name = "GitHub"
 
 # [[project.extra.social]]
