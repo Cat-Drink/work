@@ -56,8 +56,8 @@ nav = [
 [project.theme]
 variant = "modern"                # Zensical 特有：使用 modern 主题变体（或 "classic"）
 custom_dir = "docs/overrides"     # 自定义主题目录（相对于配置文件）
-logo = "https://zensical.org/assets/zensical.svg"  # 网站 Logo
-favicon = "https://zensical.org/assets/zensical.svg"          # 网站图标
+logo = "https://s1.imagehub.cc/images/2026/01/21/da6f0de203248cb422d350438e3d6801.jpg"  # 网站 Logo
+favicon = "https://s1.imagehub.cc/images/2026/01/21/da6f0de203248cb422d350438e3d6801.jpg"          # 网站图标
 language = "zh"                   # 网站语言：中文
 
 # ===== 主题特性 =====
