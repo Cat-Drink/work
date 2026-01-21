@@ -12,8 +12,8 @@
 [project]
 # ===== 基本信息 [Info] =====
 site_name = "CatDrink's Blog"           # 网站名称
-# site_url = "http://localhost:8000"  # 网站URL（请修改为你的域名）
-site_url = "https://cat-drink.github.io/work/"  # 网站URL（请修改为你的域名）
+site_url = "http://localhost:8000"  # 网站URL（请修改为你的域名）
+# site_url = "https://cat-drink.github.io/work/"  # 网站URL（请修改为你的域名）
 site_description = "一个使用 Zensical 构建的博客站站"  # 网站描述
 site_author = "CatDrink"                           # 网站作者
 copyright = "Copyright &copy; 2026～2027 CatDrink"      # 左下角的版权声明
@@ -47,10 +47,7 @@ extra_css = [
 nav = [
     { "主页" = "index.md" },
     { "关于我" = "about.md" },
-    { "闲聊" = [
-        "relax/index.md",
-        "relax/yxiebcdegithubxm.md"]
-    },
+    { "闲聊" = ["relax/index.md","relax/yxiebcdegithubxm.md"]}
 ]
 
 # ==========================================
@@ -136,15 +133,15 @@ deprecated = "已弃用"
 # ===== 多语言切换配置 =====
 # 可选：如果需要多语言翻译功能，取消注释以下配置
 # 需要配合 JavaScript 翻译脚本使用
-[[project.extra.alternate]]
-name = "中文"
-link = "javascript:translateTo('chinese_simplified');"
-lang = "zh"
+# [[project.extra.alternate]]
+# name = "中文"
+# link = "javascript:translateTo('chinese_simplified');"
+# lang = "zh"
 
-[[project.extra.alternate]]
-name = "English"
-link = "javascript:translateTo('english');"
-lang = "en"
+# [[project.extra.alternate]]
+# name = "English"
+# link = "javascript:translateTo('english');"
+# lang = "en"
 
 # ===== 社交媒体链接 =====
 # 显示在页脚的社交媒体图标

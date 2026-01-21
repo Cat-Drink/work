@@ -16,9 +16,6 @@ date: 2026-01-22
 - GitHub: [@CatDrink](https://github.com/Cat-Drink)
 - Email: [catdrink@qq.com](2738035238@qq.com)
 
-## 贡献
-
-欢迎参与项目完善！
 
 ## License
 
