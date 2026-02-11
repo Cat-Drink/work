@@ -34,3 +34,7 @@ hide_comment: true
 
 
 
+[sindresorhus/awesome: 😎 Awesome lists about all kinds of interesting topics](https://github.com/sindresorhus/awesome?tab=readme-ov-file) : 关于计算机的相关开源项目的导航
+
+
+
