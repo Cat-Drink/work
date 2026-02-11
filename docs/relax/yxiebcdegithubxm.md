@@ -23,6 +23,7 @@ hide_comment: true
 
 
 
+
 [超棒的大数据 ](https://github.com/oxnr/awesome-bigdata) : 大数据领域的技术导航手册
 
 [大数据入门指南](https://github.com/heibaiying/BigData-Notes) :提供大数据技术（如 Hadoop、Spark 等）的入门指南和学习资料
@@ -34,6 +35,9 @@ hide_comment: true
 [互联网公司常用代码赏析](https://github.com/doocs/source-code-hunter) : 剖析和挖掘互联网行业主流技术的底层实现原理
 
 
+
+
+[Build Your Own X](https://github.com/codecrafters-io/build-your-own-x) : 用代码实现自己的版本的 X （例如：Redis、Kafka、NGINX 等）,各方向的项目实战教程
 
 [sindresorhus/awesome: 😎 Awesome lists about all kinds of interesting topics](https://github.com/sindresorhus/awesome?tab=readme-ov-file) : 关于计算机的相关开源项目的导航
 
