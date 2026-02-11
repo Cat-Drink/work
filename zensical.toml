@@ -48,7 +48,7 @@ nav = [
     { "主页" = "index.md" },
     { "关于我" = "about.md" },
     { "闲聊" = ["relax/index.md","relax/yxiebcdegithubxm.md","relax/yixiebucuodeyingyong"]},
-    { "学习" = ["study/index.md","study/2026-02-11-bugbiji.md","study/2026-02-11-xvnijixianggwentjiej.md"]}
+    { "学习" = ["study/index.md","study/bugbiji.md","study/doscommand.md","study/xvnijixianggwentjiej.md"]}
 ]
 
 # ==========================================

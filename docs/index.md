@@ -805,6 +805,12 @@ hr {
 
 -   :material-account-box-outline:{ .lg .middle } __关于__
 
+-   :material-gamepad-variant-outline:{ .lg .middle } __学习__
+    
+    ---
+    [Bug笔记](study/bugbiji.md)
+    [Dos Comand](study/doscommand.md)
+    [虚拟机相关问题解决](study/xvnijixianggwentjiej.md)
     ---
     <!-- - [博客](blog/index.md) -->
     <!-- - [:octicons-arrow-right-24: 了解我](about/geren/#_4){ data-preview } -->
