@@ -1,3 +1,13 @@
+---
+title: Linux系统下中文乱码的问题
+date: 2026-02-11
+authors:
+  - name: 猫酒
+    email: 2738035238@qq.com
+categories:
+  - 字体
+  - 乱码
+---
 # Linux系统下中文乱码的问题
 
 1. 安装命令工具

@@ -1,5 +1,6 @@
 ---
 title: 一些不错的github项目
+date: 2026-02-06
 hide:
   - footer
   - feedback

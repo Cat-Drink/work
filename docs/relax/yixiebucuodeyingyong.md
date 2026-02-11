@@ -1,3 +1,13 @@
+---
+title: 一些不错的github项目
+date: 2026-02-08
+hide:
+  - footer
+  - feedback
+# comments: true
+# disqus: true
+hide_comment: true
+---
 # 一些不错的应用
 
 [Obsidian - Sharpen your thinking](https://obsidian.md/)
