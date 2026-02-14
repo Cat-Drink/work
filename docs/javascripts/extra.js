@@ -65,10 +65,11 @@ style.textContent = `
 document.head.appendChild(style);
 
 // 独立鼠标波纹效果实现
+// 独立鼠标光尾效果实现
 (function() {
   // 创建画布
   const canvas = document.createElement('canvas');
-  canvas.id = 'water-ripple-canvas';
+  canvas.id = 'mouse-trail-canvas';
   canvas.style.cssText = `
     position: fixed;
     top: 0;
@@ -81,7 +82,9 @@ document.head.appendChild(style);
   document.body.appendChild(canvas);
   
   const ctx = canvas.getContext('2d');
-  let ripples = [];
+  
+  // 存储轨迹点的数组
+  let trailPoints = [];
   
   // 设置画布大小
   function resizeCanvas() {
@@ -92,54 +95,78 @@ document.head.appendChild(style);
   resizeCanvas();
   window.addEventListener('resize', resizeCanvas);
   
-  // 创建水波
-  function createRipple(x, y) {
-    ripples.push({ x, y, radius: 0, opacity: 1, phase: 0 });
+  // 添加轨迹点
+  function addPoint(x, y) {
+    // 可以限制点数，避免过多（比如最多保留100个点）
+    if (trailPoints.length > 100) {
+      trailPoints.shift(); // 移除最早的点
+    }
+    trailPoints.push({ x, y, life: 1.0 }); // life 初始为1，逐渐减小
   }
   
-  // 更新水波
-  function updateRipples() {
-    for (let i = ripples.length - 1; i >= 0; i--) {
-      const ripple = ripples[i];
-      ripple.radius += 3;
-      ripple.opacity -= 0.01;
-      ripple.phase += 0.5;
-      
-      if (ripple.opacity <= 0) {
-        ripples.splice(i, 1);
+  // 更新轨迹点（降低生命值）
+  function updateTrail() {
+    for (let i = trailPoints.length - 1; i >= 0; i--) {
+      trailPoints[i].life -= 0.02; // 衰减速度，可调整
+      if (trailPoints[i].life <= 0) {
+        trailPoints.splice(i, 1);
       }
     }
   }
   
-  // 绘制水波
-  function drawRipples() {
+  // 绘制光尾
+  function drawTrail() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
-    ripples.forEach(ripple => {
-      // 绘制多层波纹
-      for (let i = 0; i < 3; i++) {
-        ctx.beginPath();
-        const offset = Math.sin(ripple.phase + i) * 5;
-        ctx.arc(ripple.x, ripple.y, ripple.radius + offset, 0, Math.PI * 2);
-        ctx.strokeStyle = `rgba(102, 126, 234, ${ripple.opacity * (0.8 - i * 0.2)})`;
-        ctx.lineWidth = 1 + i * 0.5;
-        ctx.stroke();
-      }
-    });
+    // 从旧到新绘制，使光点重叠自然
+    for (let i = 0; i < trailPoints.length; i++) {
+      const p = trailPoints[i];
+      // 根据生命值设置透明度和大小
+      const opacity = p.life;
+      const radius = 8 * p.life; // 光点大小随生命值减小，可调整乘数
+      
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, radius, 0, Math.PI * 2);
+      
+      // 光点颜色（这里使用亮蓝色，可自定义）
+      ctx.fillStyle = `rgba(102, 126, 234, ${opacity})`;
+      
+      // 绘制光晕效果（用径向渐变增加柔和感）
+      const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, radius);
+      gradient.addColorStop(0, `rgba(102, 126, 234, ${opacity})`);
+      gradient.addColorStop(0.5, `rgba(102, 126, 234, ${opacity * 0.5})`);
+      gradient.addColorStop(1, `rgba(102, 126, 234, 0)`);
+      ctx.fillStyle = gradient;
+      
+      ctx.fill();
+    }
   }
   
   // 动画循环
   function animate() {
-    updateRipples();
-    drawRipples();
+    updateTrail();
+    drawTrail();
     requestAnimationFrame(animate);
   }
   
   animate();
   
   // 鼠标移动事件
+  let lastX = 0, lastY = 0;
   document.addEventListener('mousemove', e => {
-    createRipple(e.clientX, e.clientY);
+    const x = e.clientX;
+    const y = e.clientY;
+    
+    // 可选：限制添加频率，避免点过于密集
+    // 如果距离上一个点太近，则不添加（平滑轨迹）
+    const distance = Math.hypot(x - lastX, y - lastY);
+    if (distance > 5) { // 可调整阈值
+      addPoint(x, y);
+      lastX = x;
+      lastY = y;
+    } else {
+      // 即使不移动，也可以偶尔添加点，但这里不添加
+    }
   });
 })();
 

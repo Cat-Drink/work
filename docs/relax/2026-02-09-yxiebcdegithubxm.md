@@ -1,6 +1,6 @@
 ---
 title: 一些不错的github项目
-date: 2026-02-06
+date: 2026-02-09
 hide:
   - footer
   - feedback
@@ -8,7 +8,7 @@ hide:
 # disqus: true
 hide_comment: true
 ---
-
+# 一些不错的github项目
 [像老乡鸡那样做饭](https://github.com/Gar-b-age/CookLikeHOC) : 集成的老乡鸡的大部分菜品
 
 [HowToCook](https://github.com/Anduin2017/HowToCook) : 程序员在家做饭方法指南

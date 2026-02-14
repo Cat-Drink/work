@@ -23,9 +23,15 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install zensical
-      - run: zensical build --clean
+      - name: Build site
+        run: |
+          zensical build --parallel
       - uses: actions/upload-pages-artifact@v4
         with:
           path: site
       - id: deployment
         uses: actions/deploy-pages@v4
+      - name: Wait for deployment
+        run: sleep 30  # 等待30秒确保部署完成
+      - name: Verify deployment
+        run: curl -f ${{ steps.deployment.outputs.page_url }} || exit 1
