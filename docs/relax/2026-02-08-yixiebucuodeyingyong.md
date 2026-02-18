@@ -1,5 +1,5 @@
 ---
-title: 一些不错的github项目
+title: 一些不错的应用
 date: 2026-02-08
 hide:
   - footer
@@ -48,3 +48,7 @@ hide_comment: true
 [通义灵码_你的智能编码助手-阿里云](https://lingma.aliyun.com/)
 
 [适用于任何网站的快速视频下载器 - DataTool.vip](https://www.datatool.vip/)
+
+
+
+[Tiez 贴汁 - 极简主义剪贴板管理工具 (Windows)](https://tiez.name666.top/zh/)
