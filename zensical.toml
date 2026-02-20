@@ -46,16 +46,18 @@ extra_css = [
 # ===== 导航配置 [Navigation] =====
 nav = [
     { "主页" = "index.md" },
-    { "闲聊" = ["relax/index.md",
-    "relax/2026-02-06-yixievpntuijian.md",
-    "relax/2026-02-07-yixiehaowandexiaowangzhang.md",
-    "relax/2026-02-08-yixiebucuodeyingyong.md",
-    "relax/2026-02-09-yxiebcdegithubxm.md"]},
-    { "学习" = ["study/index.md",
-    "study/2026-02-10-zitiweihu.md",
-    "study/2026-02-11-bugbiji.md",
-    "study/2026-02-11-doscommand.md",
-    "study/2026-02-11-xvnijixianggwentjiej.md"]},
+    { "闲聊" = ["blog/web/index.md",
+    "blog/web/2026-02-06-yixievpntuijian.md",
+    "blog/web/2026-02-07-yixiehaowandexiaowangzhang.md",
+    "blog/web/2026-02-08-yixiebucuodeyingyong.md",
+    "blog/web/2026-02-09-yxiebcdegithubxm.md",
+    "blog/web/2026-02-20-datasourceweb.md",
+    "blog/web/2026-02-20-UIUXweb.md"]},
+    { "学习" = ["blog/study/index.md",
+    "blog/study/2026-02-10-zitiweihu.md",
+    "blog/study/2026-02-11-bugbiji.md",
+    "blog/study/2026-02-11-doscommand.md",
+    "blog/study/2026-02-11-xvnijixianggwentjiej.md"]},
     { "关于我" = "about.md" }
 ]
 

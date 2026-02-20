@@ -14,6 +14,10 @@ hide_comment: true
 
 
 
+[Versus | 万物皆可对比](https://versus.com/cn)
+
+
+
 [景深模拟器](https://jherr.github.io/depth-of-field/)
 
 
@@ -63,3 +67,30 @@ hide_comment: true
 
 
 [Top Cursors - Sweezy Custom Cursors](https://sweezy-cursors.com/top-cursors/page/4/)
+
+
+
+## 资源站
+
+[小众技术工具库 | 专注分享实用软件和精品网站](https://www.xiaozhongjishu.com/?from=itab)
+
+
+
+[学吧导航 | 四十万学习爱好者都在用的学霸导航网站](https://www.xue8nav.com/)
+
+
+
+[Beginners Guide • freemediaheckyeah](https://fmhy.net/beginners-guide)
+
+
+
+- 游戏资源站
+
+[flysheep资源避难所-一个免费的二次元风格游戏站](https://www.flysheep6.com/)
+
+
+
+[GameFreer资源网 – 永久免费的高质量游戏网站](https://www.gamefreer.com/)
+
+
+
