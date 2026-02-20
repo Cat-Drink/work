@@ -798,14 +798,6 @@ hr {
 
 <div class="grid cards" markdown>
 
--   :material-gamepad-variant-outline:{ .lg .middle } __网站__
-    
-    ---
-    [一些不错的github项目](blog/web/2026-02-09-yxiebcdegithubxm.md)  
-    [一些不错的应用](blog/web/2026-02-08-yixiebucuodeyingyong.md)  
-    [一些好的小网站](blog/web/2026-02-07-yixiehaowandexiaowangzhang.md)  
-    [一些VPN推荐](blog/web/2026-02-06-yixievpntuijian.md)  
-
 <!-- -   :material-account-box-outline:{ .lg .middle } __关于__ -->
 
 -   :material-gamepad-variant-outline:{ .lg .middle } __学习__
@@ -816,7 +808,16 @@ hr {
     [虚拟机相关问题解决](blog/study/2026-02-11-xvnijixianggwentjiej.md)
     [大数据系统在低水平主机的性能优化方案](blog/study/2026-02-19-dashujxitzaidishuipingzhujidexingnyhuafeangan.md)
     ---
-- [:octicons-arrow-right-24: 了解我](about/geren/#_4){ data-preview }
+
+-   :material-gamepad-variant-outline:{ .lg .middle } __分享__
+    
+    ---
+    [一些不错的github项目](blog/web/2026-02-09-yxiebcdegithubxm.md)  
+    [一些不错的应用](blog/web/2026-02-08-yixiebucuodeyingyong.md)  
+    [一些好的小网站](blog/web/2026-02-07-yixiehaowandexiaowangzhang.md)  
+    [一些VPN推荐](blog/web/2026-02-06-yixievpntuijian.md)  
+
+<!-- - [:octicons-arrow-right-24: 了解我](about/geren/#_4){ data-preview } -->
 </div>
 
 

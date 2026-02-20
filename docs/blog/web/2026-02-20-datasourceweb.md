@@ -1,3 +1,14 @@
+---
+title: 数据查询网站
+date: 2026-02-20
+hide:
+  - footer
+  - feedback
+# comments: true
+# disqus: true
+hide_comment: true
+---
+
 [国家数据](https://data.stats.gov.cn/index.htm)
 
 
