@@ -47,12 +47,9 @@ extra_css = [
 nav = [
     { "主页" = "index.md" },
     { "分享" = ["blog/web/index.md",
-    "blog/web/2026-02-06-yixievpntuijian.md",
     "blog/web/2026-02-07-一些好玩的小网站.md",
     "blog/web/2026-02-08-一些不错的应用.md",
     "blog/web/2026-02-09-一些不错的github项目.md",
-    "blog/web/2026-02-20-datasourceweb.md",
-    "blog/web/2026-02-20-UIUXweb.md",
     "blog/web/2026-02-24-一些工具网站推荐.md"]},
     { "学习" = ["blog/study/index.md",
     "blog/study/2026-02-10-Linux系统下中文乱码的问题.md",
