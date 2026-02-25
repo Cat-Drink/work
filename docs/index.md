@@ -814,8 +814,8 @@ hr {
     ---
     [一些不错的github项目](blog/web/2026-02-09-yxiebcdegithubxm.md)  
     [一些不错的应用](blog/web/2026-02-08-yixiebucuodeyingyong.md)  
-    [一些好的小网站](blog/web/2026-02-07-yixiehaowandexiaowangzhang.md)  
-    [一些VPN推荐](blog/web/2026-02-06-yixievpntuijian.md)  
+    [一些工具网站](blog/web/2026-02-07-yixiegongjv.md)
+    [一些好玩的小网站](blog/web/2026-02-07-yixiehaowandexiaowangzhang.md)
 
 <!-- - [:octicons-arrow-right-24: 了解我](about/geren/#_4){ data-preview } -->
 </div>
