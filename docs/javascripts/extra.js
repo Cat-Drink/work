@@ -5,24 +5,6 @@
 // 即时导航兼容
 document$.subscribe(function() {
   console.log('Zensical-CatDrink-Blog loaded');
-  
-  // 页面切换后重新设置看板娘尺寸
-  setTimeout(function() {
-    const live2d = document.querySelector('#waifu #live2d');
-    if (live2d) {
-      live2d.style.width = '300px';
-      live2d.style.height = '300px';
-      // 同时设置Canvas的HTML属性尺寸
-      live2d.width = 300;
-      live2d.height = 300;
-    }
-    
-    // 隐藏waifu-tool元素
-    const waifuTool = document.querySelector('#waifu-tool');
-    if (waifuTool) {
-      waifuTool.style.display = 'none';
-    }
-  }, 100);
 });
 
 // 搞笑标题功能
@@ -209,25 +191,6 @@ document.head.appendChild(style);
     waifuElement.addEventListener('mousedown', startDrag);
     document.addEventListener('mousemove', drag);
     document.addEventListener('mouseup', endDrag);
-    
-    // 确保初始位置正确
-    waifuElement.style.bottom = '20px';
-    waifuElement.style.right = '20px';
-    
-    // 设置看板娘尺寸
-    const live2d = document.querySelector('#waifu #live2d');
-    if (live2d) {
-      live2d.style.width = '300px';
-      live2d.style.height = '300px';
-      live2d.width = 300;
-      live2d.height = 300;
-    }
-    
-    // 隐藏waifu-tool元素
-    const waifuTool = document.querySelector('#waifu-tool');
-    if (waifuTool) {
-      waifuTool.style.display = 'none';
-    }
   }
   
   // 开始拖动
