@@ -16,6 +16,12 @@ document$.subscribe(function() {
       live2d.width = 300;
       live2d.height = 300;
     }
+    
+    // 隐藏waifu-tool元素
+    const waifuTool = document.querySelector('#waifu-tool');
+    if (waifuTool) {
+      waifuTool.style.display = 'none';
+    }
   }, 100);
 });
 
@@ -215,6 +221,12 @@ document.head.appendChild(style);
       live2d.style.height = '300px';
       live2d.width = 300;
       live2d.height = 300;
+    }
+    
+    // 隐藏waifu-tool元素
+    const waifuTool = document.querySelector('#waifu-tool');
+    if (waifuTool) {
+      waifuTool.style.display = 'none';
     }
   }
   
