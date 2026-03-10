@@ -5,6 +5,15 @@
 // 即时导航兼容
 document$.subscribe(function() {
   console.log('Zensical-CatDrink-Blog loaded');
+  
+  // 页面切换后重新设置看板娘尺寸
+  setTimeout(function() {
+    const live2d = document.querySelector('#waifu #live2d');
+    if (live2d) {
+      live2d.style.width = '300px';
+      live2d.style.height = '300px';
+    }
+  }, 100);
 });
 
 // 搞笑标题功能
