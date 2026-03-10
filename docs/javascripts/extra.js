@@ -177,28 +177,40 @@ document.head.appendChild(style);
   let waifuElement;
   
   // 监听看板娘加载
-  function waitForWaifu() {
-    waifuElement = document.getElementById('waifu');
-    if (waifuElement) {
-      initDrag();
-    } else {
-      setTimeout(waitForWaifu, 1000);
+  function waitForWaifu(attempts = 0) {
+    try {
+      waifuElement = document.getElementById('waifu');
+      if (waifuElement) {
+        initDrag();
+      } else if (attempts < 10) { // 限制重试次数，避免无限循环
+        setTimeout(() => waitForWaifu(attempts + 1), 1000);
+      } else {
+        console.warn('看板娘元素未找到，拖动功能已禁用');
+      }
+    } catch (error) {
+      console.error('看板娘加载失败:', error);
     }
   }
   
   // 初始化拖动
   function initDrag() {
     waifuElement.addEventListener('mousedown', startDrag);
+    waifuElement.addEventListener('touchstart', startDrag);
     document.addEventListener('mousemove', drag);
+    document.addEventListener('touchmove', drag);
     document.addEventListener('mouseup', endDrag);
+    document.addEventListener('touchend', endDrag);
   }
   
   // 开始拖动
   function startDrag(e) {
     isDragging = true;
     const rect = waifuElement.getBoundingClientRect();
-    offsetX = e.clientX - rect.left;
-    offsetY = e.clientY - rect.top;
+    // 兼容鼠标和触摸事件
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+    offsetX = clientX - rect.left;
+    offsetY = clientY - rect.top;
     waifuElement.style.cursor = 'grabbing';
   }
   
@@ -206,8 +218,12 @@ document.head.appendChild(style);
   function drag(e) {
     if (!isDragging) return;
     
-    const x = e.clientX - offsetX;
-    const y = e.clientY - offsetY;
+    // 兼容鼠标和触摸事件
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+    
+    const x = clientX - offsetX;
+    const y = clientY - offsetY;
     
     // 限制在可视区域内
     const maxX = window.innerWidth - waifuElement.offsetWidth;
@@ -228,6 +244,7 @@ document.head.appendChild(style);
     if (waifuElement) {
       waifuElement.style.cursor = 'grab';
     }
+  }
   }
   
   // 启动监听

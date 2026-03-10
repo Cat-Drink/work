@@ -120,5 +120,25 @@
 
 <!-- 看板娘 -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+<style>
+  #waifu {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 999999 !important;
+    transform: none !important;
+  }
+  
+  #waifu-toolbar {
+    position: static !important;
+  }
+</style>
+<script>
+  // 检查 live2d_path 是否已存在，避免重复声明错误
+  if (typeof live2d_path === 'undefined') {
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js';
+    document.body.appendChild(script);
+  }
+</script>
 <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
