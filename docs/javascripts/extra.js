@@ -5,6 +5,10 @@
 // 即时导航兼容
 document$.subscribe(function() {
   console.log('Zensical-CatDrink-Blog loaded');
+  // 重新初始化看板娘
+  if (typeof loadWaifu === 'function') {
+    loadWaifu();
+  }
 });
 
 // 搞笑标题功能
