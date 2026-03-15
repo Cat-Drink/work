@@ -1,6 +1,7 @@
 ---
 title: 刷题
 description: coding
+instant: false
 ---
 # 导览
 

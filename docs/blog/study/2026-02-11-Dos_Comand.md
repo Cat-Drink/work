@@ -7,6 +7,7 @@ authors:
 categories:
   - Dos
   - 命令
+instant: false
 ---
 # Dos Comand
 

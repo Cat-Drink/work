@@ -1,6 +1,7 @@
 ---
 title: 学习
 description: 学习的内容笔记
+instant: false
 ---
 # 导览
 

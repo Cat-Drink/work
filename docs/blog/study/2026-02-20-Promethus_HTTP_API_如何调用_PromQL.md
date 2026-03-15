@@ -7,6 +7,8 @@ authors:
 categories:
   - Prometheus
   - API
+  - PromQL
+instant: false
 ---
 # Promethus HTTP API 如何调用 PromQL
 

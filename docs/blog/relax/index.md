@@ -1,6 +1,7 @@
 ---
 title: 闲聊
 description: 轻松有趣的内容集合
+instant: false
 ---
 # 导览
 

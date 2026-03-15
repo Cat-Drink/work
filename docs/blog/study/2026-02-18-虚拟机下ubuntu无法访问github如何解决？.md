@@ -7,6 +7,8 @@ authors:
 categories:
   - ubuntu
   - github
+  - 访问
+instant: false
 ---
 # 虚拟机下ubuntu无法访问github如何解决？
 
