@@ -8,6 +8,7 @@ categories:
   - Docker
 instant: false
 ---
+
 ## Docker Bug Process
 Error: Failed to download metadata for repo 'appstream': Cannot prepare internal mirrorlist: No URLs in mirrorlist
 docker 在打包安装vim报上面这个错误，出现这种错误有两种情况：
