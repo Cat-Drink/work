@@ -5,25 +5,7 @@
 // 即时导航兼容
 document$.subscribe(function() {
   console.log('Zensical-CatDrink-Blog loaded');
-  
-  // 解决看板娘与即时导航的冲突
-  if (typeof loadWaifu === 'function') {
-    // 先移除旧的看板娘
-    const oldWaifu = document.getElementById('waifu');
-    if (oldWaifu) {
-      oldWaifu.remove();
-    }
-    
-    // 重新初始化看板娘
-    loadWaifu();
-    
-    // 重新初始化看板娘拖动功能
-    setTimeout(function() {
-      if (typeof waitForWaifu === 'function') {
-        waitForWaifu();
-      }
-    }, 1000);
-  }
+  location.reload(true);
 });
 
 // 搞笑标题功能
