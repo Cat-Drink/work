@@ -1,5 +1,5 @@
 ---
-title: Docker Bug Process : Error: Failed to download metadata for repo 'appstream'
+title: Docker Bug Process Error - Failed to download metadata for repo 'appstream'
 date: 2026-03-01
 authors:
   - name: 猫酒
