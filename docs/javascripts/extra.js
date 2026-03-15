@@ -5,8 +5,6 @@
 // 即时导航兼容
 document$.subscribe(function() {
   console.log('Zensical-CatDrink-Blog loaded');
-  // 导航切换时重新初始化看板娘
-  initWaifu();
 });
 
 // 搞笑标题功能
@@ -172,124 +170,66 @@ document.head.appendChild(style);
   });
 })();
 
-// 看板娘功能
-let waifuElement;
-let isDragging = false;
-let offsetX, offsetY;
-
-// 初始化看板娘
-function initWaifu() {
-  // 清除旧的看板娘元素
-  const oldWaifu = document.getElementById('waifu');
-  if (oldWaifu) {
-    oldWaifu.remove();
-  }
+// 看板娘拖动功能
+(function() {
+  let isDragging = false;
+  let offsetX, offsetY;
+  let waifuElement;
   
-  // 重新创建看板娘容器
-  setTimeout(() => {
+  // 监听看板娘加载
+  function waitForWaifu() {
     waifuElement = document.getElementById('waifu');
     if (waifuElement) {
-      // 设置看板娘样式，防止变形放大
-      setWaifuStyle();
-      // 初始化拖动功能
       initDrag();
-      // 重新定位看板娘
-      resetWaifuPosition();
+    } else {
+      setTimeout(waitForWaifu, 1000);
     }
-  }, 500);
-}
-
-// 设置看板娘样式
-function setWaifuStyle() {
-  if (!waifuElement) return;
-  
-  // 确保看板娘有固定的尺寸
-  waifuElement.style.width = '300px';
-  waifuElement.style.height = '300px';
-  waifuElement.style.maxWidth = '300px';
-  waifuElement.style.maxHeight = '300px';
-  waifuElement.style.objectFit = 'contain';
-  
-  // 确保看板娘使用固定定位
-  waifuElement.style.position = 'fixed';
-  waifuElement.style.zIndex = '9999';
-  waifuElement.style.pointerEvents = 'auto';
-}
-
-// 重新定位看板娘
-function resetWaifuPosition() {
-  if (!waifuElement) return;
-  
-  // 确保看板娘在右下角
-  waifuElement.style.left = 'auto';
-  waifuElement.style.top = 'auto';
-  waifuElement.style.right = '20px';
-  waifuElement.style.bottom = '20px';
-}
-
-// 初始化拖动
-function initDrag() {
-  if (!waifuElement) return;
-  
-  // 移除旧的事件监听器
-  waifuElement.removeEventListener('mousedown', startDrag);
-  document.removeEventListener('mousemove', drag);
-  document.removeEventListener('mouseup', endDrag);
-  
-  // 添加新的事件监听器
-  waifuElement.addEventListener('mousedown', startDrag);
-  document.addEventListener('mousemove', drag);
-  document.addEventListener('mouseup', endDrag);
-}
-
-// 开始拖动
-function startDrag(e) {
-  isDragging = true;
-  const rect = waifuElement.getBoundingClientRect();
-  offsetX = e.clientX - rect.left;
-  offsetY = e.clientY - rect.top;
-  waifuElement.style.cursor = 'grabbing';
-}
-
-// 拖动中
-function drag(e) {
-  if (!isDragging || !waifuElement) return;
-  
-  const x = e.clientX - offsetX;
-  const y = e.clientY - offsetY;
-  
-  // 限制在可视区域内
-  const maxX = window.innerWidth - waifuElement.offsetWidth;
-  const maxY = window.innerHeight - waifuElement.offsetHeight;
-  
-  const clampedX = Math.max(0, Math.min(x, maxX));
-  const clampedY = Math.max(0, Math.min(y, maxY));
-  
-  waifuElement.style.left = `${clampedX}px`;
-  waifuElement.style.top = `${clampedY}px`;
-  waifuElement.style.right = 'auto';
-  waifuElement.style.bottom = 'auto';
-}
-
-// 结束拖动
-function endDrag() {
-  isDragging = false;
-  if (waifuElement) {
-    waifuElement.style.cursor = 'grab';
   }
-}
-
-// 监听窗口大小变化
-window.addEventListener('resize', function() {
-  if (waifuElement) {
-    setWaifuStyle();
-    // 重新定位，确保在可视区域内
+  
+  // 初始化拖动
+  function initDrag() {
+    waifuElement.addEventListener('mousedown', startDrag);
+    document.addEventListener('mousemove', drag);
+    document.addEventListener('mouseup', endDrag);
+  }
+  
+  // 开始拖动
+  function startDrag(e) {
+    isDragging = true;
     const rect = waifuElement.getBoundingClientRect();
-    if (rect.right > window.innerWidth || rect.bottom > window.innerHeight) {
-      resetWaifuPosition();
+    offsetX = e.clientX - rect.left;
+    offsetY = e.clientY - rect.top;
+    waifuElement.style.cursor = 'grabbing';
+  }
+  
+  // 拖动中
+  function drag(e) {
+    if (!isDragging) return;
+    
+    const x = e.clientX - offsetX;
+    const y = e.clientY - offsetY;
+    
+    // 限制在可视区域内
+    const maxX = window.innerWidth - waifuElement.offsetWidth;
+    const maxY = window.innerHeight - waifuElement.offsetHeight;
+    
+    const clampedX = Math.max(0, Math.min(x, maxX));
+    const clampedY = Math.max(0, Math.min(y, maxY));
+    
+    waifuElement.style.left = `${clampedX}px`;
+    waifuElement.style.top = `${clampedY}px`;
+    waifuElement.style.right = 'auto';
+    waifuElement.style.bottom = 'auto';
+  }
+  
+  // 结束拖动
+  function endDrag() {
+    isDragging = false;
+    if (waifuElement) {
+      waifuElement.style.cursor = 'grab';
     }
   }
-});
-
-// 初始加载
-setTimeout(initWaifu, 1000);
+  
+  // 启动监听
+  waitForWaifu();
+})();
