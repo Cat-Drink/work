@@ -8,8 +8,12 @@ categories:
   - iframe
   - 爬虫
   - 定位
-instant: false
+hide:
+  - footer
+  - feedback
+comments: true
 ---
+
 # iframe没有id和name时如何定位
 
 ## 一、iframe简单介绍

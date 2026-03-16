@@ -6,10 +6,14 @@ authors:
     email: 2738035238@qq.com
 categories:
   - Docker
-instant: false
+hide:
+  - footer
+  - feedback
+comments: true
 ---
 
-## Docker Bug Process
+# Docker Bug Process
+
 Error: Failed to download metadata for repo 'appstream': Cannot prepare internal mirrorlist: No URLs in mirrorlist
 docker 在打包安装vim报上面这个错误，出现这种错误有两种情况：
 1.第一种情况检查网络连接，使用ping ``www.baidu.com检查是否有外网，如果没有外网检查网络连接，如果有外网继续看下面这个情况。

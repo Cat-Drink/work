@@ -8,8 +8,12 @@ categories:
   - git
   - 冲突
   - 合并
-instant: false
+hide:
+  - footer
+  - feedback
+comments: true
 ---
+
 # 如何解决 Git 冲突：refusing to merge unrelated histories
 
 ## 一、问题原因

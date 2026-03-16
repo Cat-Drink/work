@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cat-drink.github.io//sitemap.xml

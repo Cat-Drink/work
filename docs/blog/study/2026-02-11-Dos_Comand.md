@@ -7,8 +7,12 @@ authors:
 categories:
   - Dos
   - 命令
-instant: false
+hide:
+  - footer
+  - feedback
+comments: true
 ---
+
 # Dos Comand
 
 #### 打开控制台的方式

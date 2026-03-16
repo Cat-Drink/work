@@ -8,8 +8,12 @@ categories:
   - Prometheus
   - API
   - PromQL
-instant: false
+hide:
+  - footer
+  - feedback
+comments: true
 ---
+
 # Promethus HTTP API 如何调用 PromQL
 
 ## 一、API基础

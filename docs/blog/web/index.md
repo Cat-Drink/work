@@ -1,8 +1,8 @@
 ---
 title: 网站合集
 description: 一些工具网站的合集
-instant: false
 ---
+
 # 导览
 
 ## Tips

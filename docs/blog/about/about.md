@@ -1,7 +1,6 @@
 ---
 title: 关于
 date: 2026-01-22
-instant: false
 ---
 
 # 关于 Zensical-CatDrink-Blog
